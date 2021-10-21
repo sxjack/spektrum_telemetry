@@ -32,7 +32,7 @@ the Spektrum TM1000 (or telemetry receiver) enumerates the bus.
   * T to RXI
   * R to TXO
 * Inspect and test the board.
-* Program the Arduino with the hex file linked to below.
+* Program the Arduino with the hex file.
 * Clean off any flux residue, strain relieve the wires with some gobs of silicon
 and put some clear heatshrink over the Arduino.
 
@@ -40,12 +40,13 @@ and put some clear heatshrink over the Arduino.
 
 * The sketch should program the GPS on startup.
 * The command to write the hex file to the Arduino will be something like:
-> "C:\Program Files\Arduino\hardware\tools\avr\bin\avrdude" "-CC:\Program Files\Arduino\hardware\tools\avr\etc\avrdude.conf" -v -patmega328p -cstk500v1 -PCOM3 -b19200 -Uflash:w:spektrum_gps_basic.hex:i
+>"C:\Program Files\Arduino\hardware\tools\avr\bin\avrdude" "-CC:\Program Files\Arduino\hardware\tools\avr\etc\avrdude.conf" -v -patmega328p -cstk500v1 -PCOM3 -b19200 -Uflash:w:spektrum_gps_basic.hex:i
+
 but will vary depending upon which programmer you are using etc.
 
 ## Resources
 
 * [Specification for Spektrum X-Bus Telemetry Sensors](https://www.spektrumrc.com/ProdInfo/Files/SPM_Telemetry_Developers_Specs.pdf)
-* [Arduino Pro Mini 3.3V[(https://www.banggood.com/3_3V-8MHz-ATmega328P-AU-Pro-Mini-Microcontroller-Board-With-Pins-p-916211.html)
+* [Arduino Pro Mini 3.3V](https://www.banggood.com/3_3V-8MHz-ATmega328P-AU-Pro-Mini-Microcontroller-Board-With-Pins-p-916211.html)
 * [Geekcreit 5Hz GPS](https://www.banggood.com/1-5Hz-VK2828U7G5LF-TTL-Ublox-GPS-Module-With-Antenna-p-965540.html)
 
