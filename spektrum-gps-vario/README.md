@@ -13,7 +13,7 @@ A link to one that I have used is below.
 ## Tools
 
 * Arduino IDE
-* Arduino ISP programmer. I use an Arduino Nano or USBasp.
+* Arduino ISP programmer. I use a USBasp.
 * U-blox u-center (optional).
 * FTDI USB to TTL serial interface (optional).
 
