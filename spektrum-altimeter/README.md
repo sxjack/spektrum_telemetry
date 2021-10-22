@@ -36,7 +36,7 @@ and put some clear heatshrink over the Arduino.
 ## Notes
 
 * The command to write the hex file to the Arduino will be something like:
->"C:\Program Files\Arduino\hardware\tools\avr\bin\avrdude" "-CC:\Program Files\Arduino\hardware\tools\avr\etc\avrdude.conf" -v -patmega328p -cstk500v1 -PCOM3 -b19200 -Uflash:w:spektrum_altimeter.hex:i
+>"C:\Program Files\Arduino\hardware\tools\avr\bin\avrdude" "-CC:\Program Files\Arduino\hardware\tools\avr\etc\avrdude.conf" -v -patmega328p -cusbasp -Pusb -b19200 -Uflash:w:spektrum_altimeter.hex:i
 
 ## Resources</h3>
 
