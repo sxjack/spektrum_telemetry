@@ -1,5 +1,5 @@
-# spektrum_telemetry
+# Spektrum Telemetry Sensors
 
 Telemetry sensors for Spektrum using Arduinos.
 
-Hex only. If you want a variation, raise an issue.
+Hex only.
