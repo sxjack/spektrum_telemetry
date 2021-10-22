@@ -11,7 +11,7 @@
 * Arduino IDE
 * Arduino ISP programmer. I use a USBasp.
 
-## Build<
+## Build
 
 * Solder headers on to the Arduino to allow it to be programmed though its ISP interface.
 You have to program it using the ISP as if you have a bootloader on the chip it will not be ready when 
@@ -38,7 +38,7 @@ and put some clear heatshrink over the Arduino.
 * The command to write the hex file to the Arduino will be something like:
 >"C:\Program Files\Arduino\hardware\tools\avr\bin\avrdude" "-CC:\Program Files\Arduino\hardware\tools\avr\etc\avrdude.conf" -v -patmega328p -cusbasp -Pusb -Uflash:w:spektrum_altimeter.hex:i
 
-## Resources</h3>
+## Resources
 
 * [Specification for Spektrum X-Bus Telemetry Sensors](https://www.spektrumrc.com/ProdInfo/Files/SPM_Telemetry_Developers_Specs.pdf)
 * [Arduino Pro Mini 3.3V](https://www.banggood.com/3_3V-8MHz-ATmega328P-AU-Pro-Mini-Microcontroller-Board-With-Pins-p-916211.html)
