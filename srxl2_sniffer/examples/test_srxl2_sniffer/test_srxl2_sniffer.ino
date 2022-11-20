@@ -30,6 +30,15 @@ const int status_do = 13;
 
 const int status_do = 25;
 
+#elif defined(ARDUINO_RASPBERRY_PI_PICO_W)
+
+// Why did they change the LED output on the Pico W?
+
+#include <pico/cyw43_arch.h>
+
+#define SERIAL_SRXL2  Serial2
+#define SERIAL_DEBUG   Serial
+
 #else
 
 #warning "Not tested on this processor."
@@ -58,8 +67,10 @@ void setup() {
 
   status = srxl2.begin(&SERIAL_SRXL2);
 
+#if not defined(ARDUINO_RASPBERRY_PI_PICO_W)
   pinMode(status_do,OUTPUT);
   digitalWrite(status_do,LOW);
+#endif
 
 #if defined(SERIAL_DEBUG)
 
@@ -84,8 +95,12 @@ void loop() {
 #endif
 
   status = srxl2.sniffer();
-  
+
+#if defined(ARDUINO_RASPBERRY_PI_PICO_W)
+  cyw43_arch_gpio_put(0,(status) ? HIGH: LOW);
+#else
   digitalWrite(status_do,(status) ? HIGH: LOW);
+#endif
 
 #if defined(SERIAL_DEBUG)
 
