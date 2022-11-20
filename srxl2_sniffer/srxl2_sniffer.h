@@ -13,7 +13,6 @@
 
 #define SRXL_ID        0xa6
 
-#define CONTROL_DATA   1
 #define CHECK_THROTTLE 0
 
 /*

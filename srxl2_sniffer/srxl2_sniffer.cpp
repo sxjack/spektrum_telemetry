@@ -7,8 +7,9 @@
  *
  * Notes
  *
- *
- *
+ * A library for detecting Spektrum SRXL2 on a serial link.
+ * Typically this link will be the signal line between an 
+ * Spektrum receiver and an ESC.
  *
  *
  */
@@ -28,7 +29,6 @@ SRXL2_Sniffer::SRXL2_Sniffer() {
   memset(channel_value,0,sizeof(channel_value));
 
   srxl2_detected  =    0;
-
   Debug_Serial    = NULL;
   srxl2           = NULL;
   
@@ -60,6 +60,10 @@ uint16_t SRXL2_Sniffer::sniffer() {
   static int       rx_index = 0;
   static uint8_t   rx_buffer[SRXL2_RX_SIZE];
 
+  if (!srxl2) {
+
+    return 0;
+  }
   
   for (i = 0; (i < 32)&&(srxl2->available()); ++i) {
 
